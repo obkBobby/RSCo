@@ -1,0 +1,180 @@
+
+
+--- PAGE 1 ---
+Robert Sawyer site audit
+Prepared in-browser from live site inspection
+Private deliverable
+Page 1
+Robert Sawyer Site Audit
+Ruthless, exhaustive marketing and UX critique of the live site
+Verdict
+Promising brand, unfinished funnel
+Biggest risk
+Broken lead-capture path on Free Guides
+Conversion readiness
+Not ready yet
+Trust level
+Moderate, but under-proofed
+Visual quality
+Clean and coherent, not premium
+Bottom line
+The site is smart and clear, but it is not yet operationally complete. The free-guide embed is the
+biggest problem; proof assets and brand coherence are the next biggest gaps.
+What I checked
+•
+Homepage
+•
+Start Here
+•
+Free Guides
+•
+Work With Me
+•
+Courses
+•
+Linked RelationSync pages
+•
+Headings, links, metadata, forms, and console errors
+
+
+--- PAGE 2 ---
+Robert Sawyer site audit
+Prepared in-browser from live site inspection
+Private deliverable
+Page 2
+Executive summary
+This site has a strong point of view. It frames relationship problems as repeating patterns, protection strategies, and armor
+rather than simple communication failures. That framing is coherent and distinct. The writing is thoughtful, and the layout is
+readable. Nothing about the site feels obviously deceptive or sloppy.
+The marketing problem is not message clarity; it is conversion completeness. The Free Guides page exposes disabled form
+fields and a visible placeholder for a Kit embed. That is the equivalent of a storefront with the cash register unplugged. On
+top of that, the site lacks visible testimonials, credentials, or outcome proof, which means visitors have to trust the idea
+before they have enough evidence to do so.
+In short: good concept, decent execution, weak proof, broken lead capture, and fragmented funnel architecture.
+High-priority findings
+•
+The Free Guides form flow is not live: email fields and buttons are disabled placeholders.
+•
+Proof assets are thin to nonexistent on the pages checked.
+•
+The Courses page is too shallow to function as a true sales page.
+•
+Conversion links jump to a separate domain, creating brand friction.
+•
+The site repeats its conceptual language well but leans too hard on abstraction.
+What works
+•
+Strong, non-shaming voice.
+•
+Clear hero and pathing on the homepage.
+•
+Clean editorial typography.
+•
+Good separation between individual and couples pain.
+•
+No visible JavaScript errors in the pages checked.
+
+
+--- PAGE 3 ---
+Robert Sawyer site audit
+Prepared in-browser from live site inspection
+Private deliverable
+Page 3
+Detailed critique by category
+Positioning
+The position is real and potentially strong: people are not broken; they are protected; repeated conflict is the problem. That is
+differentiated and emotionally resonant. The missing piece is sharper audience definition and a clearer not-for-everyone
+boundary.
+Voice and messaging
+The copy feels intelligent, grounded, and humane. It avoids gimmicks. The downside is that it stays at the conceptual level
+for a long time. Visitors need one or two grounded examples earlier so they can immediately see themselves in the
+framework.
+Design and UX
+The visual system is competent: decent whitespace, strong heading hierarchy, calm palette, and readable cards. It does not
+look broken. But it also does not yet feel premium. Repeated section structures make the page feel formulaic rather than
+composed.
+Trust and proof
+This is the biggest strategic gap. Relationship coaching is a trust-heavy category. Without visible proof, the site is asking for
+belief without evidence. That is a hard sell, especially to cold traffic.
+Funnel and conversion
+The Free Guides page should be the main conversion engine, but the captured browser state shows disabled form controls
+and placeholder copy. This needs immediate repair. The rest of the funnel cannot compensate for a broken top-of-funnel
+capture path.
+Brand architecture
+The main brand is Robert Sawyer, but crucial calls to action go to RelationSync pages on another domain. That may be
+intentional, but it weakens continuity. The user feels a brand handoff before they have enough trust to tolerate one.
+Page-by-page notes
+Homepage
+Strong hero, clear pain statement, and useful split between individual and couples routes. Needs proof, more concrete
+outcomes, and less CTA repetition.
+Start Here
+Good orientation page, but it feels like a navigation hub rather than a persuasion page. Useful for routing, weak for trust.
+Free Guides
+Best conceptual page on the site, but the most important problem is that the forms are disabled placeholders. The opt-in path
+is not live.
+Work With Me
+Clear high-level framing and offer stack, but still too abstract. Needs process, outcomes, objections, and proof.
+Courses
+Too thin to support a purchase decision. It currently reads like a stub.
+External RelationSync pages
+More forceful and conversion-oriented, but they create a secondary brand layer that may confuse users unless that split is
+deliberate and explained.
+
+
+--- PAGE 4 ---
+Robert Sawyer site audit
+Prepared in-browser from live site inspection
+Private deliverable
+Page 4
+Marketing playbook assessment
+Positioning
+•
+Good foundation.
+•
+Needs a sharper definition of the ideal reader.
+•
+Should clarify what makes this approach different from generic relationship advice.
+Proof
+•
+Weakest major marketing element.
+•
+Add testimonials, credentialing, case examples, or clear outcome stories.
+•
+Make trust visible before the user has to click through.
+Offer ladder
+•
+The ladder exists conceptually: free guides -> coaching -> courses.
+•
+Right now the sequence feels fragmented.
+•
+Every page should clearly do one job.
+Conversion friction
+•
+Too high for a cold visitor.
+•
+Broken embeds and external domain jumps increase drop-off.
+•
+Reduce steps between interest and opt-in.
+SEO / metadata
+•
+Basic metadata exists on the pages checked.
+•
+Canonical and social metadata were not visible in the checks I performed.
+•
+Not broken, but not strategically optimized.
+Priority fixes
+•
+Repair the Free Guides embed and test the opt-in flow end to end.
+•
+Add proof assets across the site, especially above the fold or near conversion points.
+•
+Rewrite the Courses page so it actually sells the offer.
+•
+Decide how RelationSync relates to Robert Sawyer and make the brand architecture explicit.
+•
+Add more concrete examples and outcomes to reduce abstraction.
+•
+Reduce repeated CTA clusters so the page feels more intentional.
+Final verdict: This is a thoughtful brand with a strong point of view, but the lead-gen layer is
+unfinished. Fix the capture flow, add proof, and tighten the funnel before calling it
+conversion-ready.
