@@ -14,13 +14,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=20260627-balance" />
+  <link rel="stylesheet" href="assets/styles.css?v=20260629-two-path" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Robert Sawyer home"><span class="brand-mark">RS</span><span>Robert Sawyer</span></a>
-    <nav class="nav" aria-label="Main navigation"><a href="start.html">Start Here</a><a href="free.html">Free Guides</a><a href="work-with-me.html">Work With Me</a><a href="courses.html">Courses</a></nav>
-    <a class="nav-cta" href="#individual-guide">Get the Individual Guide</a>
+    <nav class="nav" aria-label="Main navigation"><a href="index.html#individuals">Individuals</a><a href="index.html#couples">Couples</a><a href="start.html">About</a><a href="index.html#client-stories">Client Stories</a><a href="index.html#coaching-options">Work With Me</a></nav>
+    <a class="nav-cta" href="free.html#individual-guide">Get a free guide</a>
   </header>
 
   <main>
@@ -82,17 +82,19 @@
         </div>
 
         <aside class="kit-card">
-          <p class="card-label">Kit form integration</p>
-          <h3>Get the individual guide.</h3>
-          <p>This is the production capture point. Replace this preview form with the Kit embed for <strong>Lead Magnet - Why You React That Way</strong>.</p>
-          <form class="lead-form" action="#" method="post" data-kit-placeholder="Lead Magnet - Why You React That Way">
+          <p class="card-label">Individual free guide</p>
+          <h3>Why You React That Way</h3>
+          <p>A free guide for the protective reactions that take over when relationships feel unsafe.</p>
+          <form action="https://app.kit.com/forms/9626932/subscriptions" class="lead-form kit-live-form seva-form formkit-form" method="post" data-sv-form="9626932" data-uid="e6fc7c7ad0" data-format="inline" data-version="5" data-email-tag="leadmagnet_why_you_react_that_way" data-conversion-name="individual_guide_request" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Welcome! Your Why You React That Way Guide will arrive in your e-mail shortly.","redirect_url":""},"recaptcha":{"enabled":false}},"version":"5"}'>
             <input type="hidden" name="form-name" value="Lead Magnet - Why You React That Way" />
+            <label for="individual-first-name">First name</label>
+            <input class="formkit-input" id="individual-first-name" name="fields[first_name]" type="text" placeholder="First Name" autocomplete="given-name" required />
             <label for="individual-email">Email address</label>
-            <input id="individual-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
-            <button class="button primary" type="submit">Get the Individual Guide</button>
-            <p class="form-message" role="status" aria-live="polite"></p>
+            <input class="formkit-input" id="individual-email" name="email_address" type="email" placeholder="Email Address" autocomplete="email" required aria-describedby="individual-note" />
+            <button class="button primary formkit-submit" type="submit"><span>Send me the guide</span></button>
           </form>
-          <p class="form-note">Kit form: <code>Lead Magnet - Why You React That Way</code>. Recommended tag: <code>leadmagnet_why_you_react_that_way</code></p>
+          <p class="form-note" id="individual-note">You’ll get the guide by email. No spam. Unsubscribe anytime.</p>
+          <p class="form-note">Connected to Kit form <code>9626932</code> / <code>Why You React That Way</code>.</p>
         </aside>
       </div>
     </section>
@@ -129,17 +131,19 @@
         </div>
 
         <aside class="kit-card">
-          <p class="card-label">Kit form integration</p>
-          <h3>Get the couples guide.</h3>
-          <p>This is the production capture point. Replace this preview form with the Kit embed for <strong>Lead Magnet - Why You Keep Having the Same Fight</strong>.</p>
-          <form class="lead-form" action="#" method="post" data-kit-placeholder="Lead Magnet - Why You Keep Having the Same Fight">
+          <p class="card-label">Couple free guide</p>
+          <h3>Why You Keep Having the Same Fight</h3>
+          <p>A free guide for seeing the cycle underneath conflict, shutdown, control, and distance.</p>
+          <form action="https://app.kit.com/forms/9626927/subscriptions" class="lead-form kit-live-form seva-form formkit-form" method="post" data-sv-form="9626927" data-uid="40dd5a72c7" data-format="inline" data-version="5" data-email-tag="leadmagnet_why_you_keep_having_the_same_fight" data-conversion-name="couple_guide_request" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Welcome! Your Why You Keep Having the Same Fight Guide will arrive in your e-mail shortly.","redirect_url":""},"recaptcha":{"enabled":false},"return_visitor":{"action":"hide","custom_content":""}},"version":"5"}'>
             <input type="hidden" name="form-name" value="Lead Magnet - Why You Keep Having the Same Fight" />
+            <label for="couples-first-name">First name</label>
+            <input class="formkit-input" id="couples-first-name" name="fields[first_name]" type="text" placeholder="First Name" autocomplete="given-name" required />
             <label for="couples-email">Email address</label>
-            <input id="couples-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
-            <button class="button primary" type="submit">Get the Couples Guide</button>
-            <p class="form-message" role="status" aria-live="polite"></p>
+            <input class="formkit-input" id="couples-email" name="email_address" type="email" placeholder="Email Address" autocomplete="email" required aria-describedby="couples-note" />
+            <button class="button primary formkit-submit" type="submit"><span>Send me the guide</span></button>
           </form>
-          <p class="form-note">Kit form: <code>Lead Magnet - Why You Keep Having the Same Fight</code>. Recommended tag: <code>leadmagnet_why_you_keep_having_the_same_fight</code></p>
+          <p class="form-note" id="couples-note">You’ll get the guide by email. No spam. Unsubscribe anytime.</p>
+          <p class="form-note">Connected to Kit form <code>9626927</code> / <code>Why You Keep Having the Same Fight</code>.</p>
         </aside>
       </div>
     </section>
@@ -189,6 +193,7 @@
   </main>
 
   <footer class="site-footer"><p>© <span id="year"></span> Robert Sawyer. Coaching and education, not therapy or crisis services.</p><div class="footer-links"><a href="index.html">Home</a><a href="start.html">Start</a><a href="work-with-me.html">Work With Me</a></div></footer>
+  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
   <script src="assets/main.js"></script>
 </body>
 </html>
