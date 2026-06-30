@@ -96,6 +96,8 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .microcopy { margin-top: 18px; max-width: 760px; color: var(--mute); font-size: 16px; }
 .choice-prompt { margin-top: clamp(32px, 5vw, 56px); max-width: 1120px; }
 .choice-grid, .final-choice-grid, .embedded-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.three-choice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.final-choice-grid { grid-template-columns: 1fr; }
 .embedded-form-grid { grid-template-columns: 1fr; gap: 12px; }
 .choice-card, .final-choice-grid article {
   min-height: 160px;
@@ -157,7 +159,8 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 
 .symptom-grid, .proof-grid, .example-grid, .process-grid, .outcome-grid, .card-grid, .resource-grid, .path-grid, .decoder-steps, .feature-grid, .testimonial-grid { display: grid; gap: 8px; }
 .symptom-grid { grid-template-columns: repeat(4, 1fr); }
-.proof-grid, .process-grid, .outcome-grid, .card-grid, .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+.proof-grid, .process-grid, .outcome-grid, .card-grid { grid-template-columns: repeat(3, 1fr); }
+.testimonial-grid { grid-template-columns: repeat(2, 1fr); }
 .resource-grid, .decoder-steps, .example-grid.two, .process-grid.two, .outcome-grid.two, .two-paths { grid-template-columns: repeat(2, 1fr); }
 .feature-grid.three { grid-template-columns: repeat(3, 1fr); }
 .symptom-grid article, .feature-card, .path-card, .offer-card, .form-placeholder, .proof-card, .example-card, .process-card, .outcome-card, .resource-card {
@@ -301,7 +304,7 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
   .split > .stack { padding-top: 0; }
   .nav { justify-content: flex-start; flex-wrap: wrap; gap: 12px 18px; font-size: 15px; }
   .nav-cta { display: none; }
-  .symptom-grid, .proof-grid, .example-grid, .process-grid, .outcome-grid, .card-grid, .resource-grid, .feature-grid.three, .decoder-steps, .two-paths, .example-grid.two, .process-grid.two, .outcome-grid.two, .testimonial-grid, .choice-grid, .final-choice-grid, .embedded-form-grid, .symptom-list.two-column { grid-template-columns: 1fr; }
+  .symptom-grid, .proof-grid, .example-grid, .process-grid, .outcome-grid, .card-grid, .resource-grid, .feature-grid.three, .decoder-steps, .two-paths, .example-grid.two, .process-grid.two, .outcome-grid.two, .testimonial-grid, .choice-grid, .three-choice-grid, .final-choice-grid, .embedded-form-grid, .symptom-list.two-column { grid-template-columns: 1fr; }
   h1 { font-size: clamp(48px, 15vw, 84px); }
   h2 { font-size: clamp(36px, 12vw, 64px); }
   .site-footer { flex-direction: column; }
