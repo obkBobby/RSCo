@@ -95,18 +95,17 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .hero-actions.compact { margin-top: 8px; }
 .microcopy { margin-top: 18px; max-width: 760px; color: var(--mute); font-size: 16px; }
 .choice-prompt { margin-top: clamp(32px, 5vw, 56px); max-width: 1120px; }
-.choice-grid, .final-choice-grid, .embedded-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.choice-grid, .final-choice-grid, .embedded-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; align-items: start; }
 .three-choice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.final-choice-grid { grid-template-columns: 1fr; }
+.final-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .embedded-form-grid { grid-template-columns: 1fr; gap: 12px; }
 .choice-card, .final-choice-grid article {
-  min-height: 160px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background: var(--soft-cloud);
   border: 1px solid transparent;
-  padding: clamp(20px, 3vw, 32px);
+  padding: clamp(18px, 2.2vw, 28px);
   transition: border-color .16s ease, color .16s ease, background .16s ease;
 }
 .choice-card:hover, .choice-card:focus-visible { border-color: var(--blue); color: var(--blue); background: #f8faff; }
@@ -160,7 +159,7 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .symptom-grid, .proof-grid, .example-grid, .process-grid, .outcome-grid, .card-grid, .resource-grid, .path-grid, .decoder-steps, .feature-grid, .testimonial-grid { display: grid; gap: 8px; }
 .symptom-grid { grid-template-columns: repeat(4, 1fr); }
 .proof-grid, .process-grid, .outcome-grid, .card-grid { grid-template-columns: repeat(3, 1fr); }
-.testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+.testimonial-grid { grid-template-columns: repeat(4, 1fr); }
 .resource-grid, .decoder-steps, .example-grid.two, .process-grid.two, .outcome-grid.two, .two-paths { grid-template-columns: repeat(2, 1fr); }
 .feature-grid.three { grid-template-columns: repeat(3, 1fr); }
 .symptom-grid article, .feature-card, .path-card, .offer-card, .form-placeholder, .proof-card, .example-card, .process-card, .outcome-card, .resource-card {
@@ -235,7 +234,12 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .pillar-list span { display: block; color: var(--charcoal); margin-top: 6px; grid-column: 2; }
 
 .page-hero { padding-bottom: clamp(48px, 7vw, 80px); }
-.page-hero h1 { font-size: clamp(56px, 8.5vw, 120px); }
+.page-hero h1 {
+  font-size: clamp(56px, 8.5vw, 120px);
+  text-transform: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 .tag { display: inline-flex; border: 1px solid var(--hairline); color: var(--ink); background: var(--canvas); border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 700; margin-bottom: 16px; }
 .check-list, .bullet-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; color: var(--charcoal); }
 .check-list li, .bullet-list li { position: relative; padding-left: 22px; }
@@ -255,7 +259,9 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 }
 .testimonial-card video {
   display: block;
-  width: 100%;
+  width: min(100%, 420px);
+  max-width: 100%;
+  margin: 0 auto;
   aspect-ratio: 9 / 16;
   object-fit: cover;
   background: var(--ink);
@@ -314,9 +320,16 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
   .hero, .section, .hero-home, .decoder-hero, .site-footer { width: calc(100% - 28px); }
   .hero-actions, .hero-actions.compact { display: grid; grid-template-columns: 1fr; width: 100%; }
   .button { width: 100%; }
-  h1 { font-size: clamp(40px, 13vw, 68px); overflow-wrap: anywhere; }
-  h2 { font-size: clamp(34px, 10.5vw, 56px); overflow-wrap: anywhere; }
+  h1 { font-size: clamp(40px, 13vw, 68px); overflow-wrap: anywhere; word-break: break-word; }
+  .page-hero h1 { font-size: clamp(36px, 11vw, 58px); line-height: 0.95; }
+  h2 { font-size: clamp(34px, 10.5vw, 56px); overflow-wrap: anywhere; word-break: break-word; }
   .diagnostic-card, .kit-card, .dark-panel, .guide-preview-card { padding: 18px; }
+}
+
+@media (min-width: 821px) {
+  .testimonial-section .lede {
+    white-space: nowrap;
+  }
   .diagnostic-card, .guide-preview-card { min-height: 360px; }
   .signal-list li { grid-template-columns: 32px 1fr; gap: 10px; }
   .pillar-list li { grid-template-columns: 42px 1fr; gap: 10px; }
