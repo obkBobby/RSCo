@@ -95,6 +95,7 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .hero-actions.compact { margin-top: 8px; }
 .microcopy { margin-top: 18px; max-width: 760px; color: var(--mute); font-size: 16px; }
 .choice-prompt { margin-top: clamp(32px, 5vw, 56px); max-width: 1120px; }
+  #find-your-pattern h2 { margin-bottom: clamp(24px, 3vw, 34px); }
 .choice-grid, .final-choice-grid, .embedded-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .three-choice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .final-choice-grid { grid-template-columns: 1fr; }

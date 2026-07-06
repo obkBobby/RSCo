@@ -61,7 +61,7 @@ document.querySelectorAll('form[data-kit-placeholder]').forEach((form) => {
     }
 
     if (message) {
-      message.textContent = `Success — this preview form validated your email for ${guide}. Connect the live email form before production collection.`;
+      message.textContent = `Success  this preview form validated your email for ${guide}. Connect the live email form before production collection.`;
       message.classList.add('is-visible');
     }
   });
