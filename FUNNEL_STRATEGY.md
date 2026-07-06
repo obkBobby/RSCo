@@ -46,7 +46,7 @@ Individual coaching should be the first priority for RobertSawyer.co because:
 
 Primary individual problem:
 
-> I keep reacting in ways I hate — shutting down, overexplaining, controlling, pleasing, withdrawing, or spiraling — and I do not know how to stop.
+> I keep reacting in ways I hate  shutting down, overexplaining, controlling, pleasing, withdrawing, or spiraling  and I do not know how to stop.
 
 Individual offer ladder:
 
@@ -98,7 +98,7 @@ The group should not be sold as vague “healing” or “community.” It shoul
 
 ## Recommended lead magnets
 
-### Individual lead magnet — primary
+### Individual lead magnet  primary
 
 Working title options:
 
@@ -134,7 +134,7 @@ Primary CTA:
 
 > Get the free guide: Why You React That Way
 
-### Couples lead magnet — secondary
+### Couples lead magnet  secondary
 
 Working title options:
 

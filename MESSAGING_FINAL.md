@@ -12,7 +12,7 @@ Subtitle:
 
 Primary promise:
 
-Help the reader understand why they shut down, overexplain, control, people-please, criticize, withdraw, or become defensive — and what to do before the next conflict takes over.
+Help the reader understand why they shut down, overexplain, control, people-please, criticize, withdraw, or become defensive  and what to do before the next conflict takes over.
 
 Primary CTA:
 
@@ -40,7 +40,7 @@ Subtitle:
 
 Primary promise:
 
-Help the reader see why the topic changes but the emotional loop stays the same — blame, defense, shutdown, control, resentment, repair that does not last — and how to start naming the pattern without making one person the villain.
+Help the reader see why the topic changes but the emotional loop stays the same  blame, defense, shutdown, control, resentment, repair that does not last  and how to start naming the pattern without making one person the villain.
 
 Primary CTA:
 
@@ -265,8 +265,8 @@ Public translation:
 
 RobertSawyer.co should be a two-path lead conversion hub:
 
-1. Primary path: individual guide — **Why You React That Way**
-2. Secondary path: couples guide — **Why You Keep Having the Same Fight**
+1. Primary path: individual guide  **Why You React That Way**
+2. Secondary path: couples guide  **Why You Keep Having the Same Fight**
 
 The individual path should get slightly more visual weight at first because one person can opt in without partner buy-in. The couples path should remain prominent but framed as a guide for seeing the pattern, not diagnosing the partner.
 

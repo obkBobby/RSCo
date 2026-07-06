@@ -102,7 +102,7 @@ Use “relationship armor” only after naming the felt problem first. Good sequ
 
 ## Positioning guardrails
 
-- Visual tone: bright, open, clear, and hopeful — “Batman” in truth-telling/message, not dark-background noir as the default website palette.
+- Visual tone: bright, open, clear, and hopeful  “Batman” in truth-telling/message, not dark-background noir as the default website palette.
 - Avoid in cold headlines/lead magnet titles: operating system, survival system, relationship system, decoder, map the power, challenge the operating system.
 - Use freely: pattern, protection pattern, reaction, same fight, shutdown, overexplaining, control, people-pleasing, defensiveness, withdrawal, resentment, repair that does not last, connection, trust, self-respect, honesty, different move, one layer deeper.
 - Tone: direct, serious, clinically grounded, human, hopeful, not shaming.

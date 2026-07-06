@@ -20,7 +20,7 @@ Suggested caption:
 
 Use when the page needs proof that coaching helps people move from internal overwhelm into concrete action.
 
-## Testimonial 02 — Joseph
+## Testimonial 02  Joseph
 
 Strong verified lines:
 
@@ -32,11 +32,11 @@ Strong verified lines:
 
 Suggested caption:
 
-**A coach who feels like a friend — and still tells you the hard truth.**
+**A coach who feels like a friend  and still tells you the hard truth.**
 
 Use when the page needs proof of Rob’s tone: warm enough to trust, direct enough to challenge.
 
-## Testimonial 03 — Alev
+## Testimonial 03  Alev
 
 Strong verified lines:
 

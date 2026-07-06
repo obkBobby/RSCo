@@ -11,11 +11,11 @@ Static HTML/CSS/JS lead-conversion site for RobertSawyer.co.
 
 ## Pages
 
-- `index.html` — conversion-focused homepage
-- `free.html` — free lead magnet page with Kit embed placeholders
-- `start.html` — choose-your-path page
-- `work-with-me.html` — coaching overview and RelationSync application path
-- `courses.html` — mini-course/self-paced path
+- `index.html`  conversion-focused homepage
+- `free.html`  free lead magnet page with Kit embed placeholders
+- `start.html`  choose-your-path page
+- `work-with-me.html`  coaching overview and RelationSync application path
+- `courses.html`  mini-course/self-paced path
 
 ## Local Preview
 
@@ -33,8 +33,8 @@ http://localhost:8080
 
 Recommended branches:
 
-- `main` — stable/approved live branch
-- `draft/homepage-redesign` — Jim's working branch for revisions
+- `main`  stable/approved live branch
+- `draft/homepage-redesign`  Jim's working branch for revisions
 
 Recommended publishing rule:
 
