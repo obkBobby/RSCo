@@ -89,6 +89,7 @@ h1 {
   text-wrap: balance;
 }
 h2 { font-size: clamp(36px, 5vw, 76px); line-height: .92; font-weight: 900; text-wrap: balance; }
+h2 + * { margin-top: clamp(18px, 3vw, 36px); }
 h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; letter-spacing: -.03em; }
 .hero-copy { max-width: 760px; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.25; margin-top: 24px; color: var(--charcoal); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
@@ -208,6 +209,7 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .dark-panel .button.primary { background: var(--blue); color: var(--canvas); }
 .dark-panel .button.primary:hover { background: var(--blue-dark); }
 .dark-panel .button.secondary { background: #2f2f2f; color: var(--canvas); border-color: #2f2f2f; }
+.dark-panel .process-grid { margin-top: clamp(18px, 3vw, 36px); }
 .lead-panel-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(460px, .72fr); gap: 8px; align-items: stretch; }
 .kit-card { background: var(--soft-cloud); color: var(--ink); }
 .dark-panel .kit-card { background: var(--canvas); color: var(--ink); }
