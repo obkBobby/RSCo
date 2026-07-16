@@ -5,7 +5,7 @@ ROOT = Path(__file__).parent
 STYLE = "/assets/styles.css?v=20260714-search-capture"
 
 NAV = '<nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/individual-coaching/">Individual Coaching</a><a href="/couples-coaching/">Couples Coaching</a><a href="/relationship-help/">Relationship Help</a><a href="/free-guides/">Free Guides</a><a href="/work-with-robert/">Work With Robert</a></nav>'
-FOOTER_LINKS = '<a href="/">Home</a><a href="/individual-coaching/">Individual Coaching</a><a href="/couples-coaching/">Couples Coaching</a><a href="/relationship-help/">Relationship Help</a><a href="/pattern-interrupt-lab/">Pattern Interrupt Lab</a><a href="/free-guides/">Free Guides</a><a href="/work-with-robert/">Work With Robert</a>'
+FOOTER_LINKS = '<a href="/">Home</a><a href="/individual-coaching/">Individual Coaching</a><a href="/couples-coaching/">Couples Coaching</a><a href="/relationship-help/">Relationship Help</a><a href="/free-guides/">Free Guides</a><a href="/work-with-robert/">Work With Robert</a>'
 
 DISCLAIMER = "Coaching and education are not therapy, crisis support, or a substitute for medical or mental-health care. If there is abuse, coercion, violence, self-harm risk, addiction crisis, or immediate danger, prioritize safety and licensed professional/crisis support first."
 
@@ -30,7 +30,7 @@ def layout(title, description, canonical, body, scripts=''):
   <header class="site-header">
     <a class="brand" href="/" aria-label="Robert Sawyer home"><span class="brand-mark">RS</span><span>Robert Sawyer</span></a>
     {NAV}
-    <a class="nav-cta" href="/pattern-interrupt-lab/">Join the Lab</a>
+    <a class="nav-cta" href="/#find-your-pattern">Find Your Pattern</a>
   </header>
   <main>
 {body}
@@ -77,10 +77,10 @@ hub_cards = [
 ]
 
 hub_body = f'''
-    <section class="hero page-hero"><div class="eyebrow">Relationship Help Guides</div><h1>Choose the right kind of help before the pattern chooses for you.</h1><p class="hero-copy">These pages are for the person searching at midnight: therapy, coaching, books, quizzes, courses, or something else. The goal is not to sell every reader coaching. The goal is to help you tell the truth about what kind of help fits the pattern you keep repeating.</p><div class="hero-actions"><a class="button primary" href="/pattern-interrupt-lab/">Join the Pattern Interrupt Lab waitlist</a><a class="button secondary" href="/free-guides/">Start with a free guide</a></div></section>
+    <section class="hero page-hero"><div class="eyebrow">Relationship Help Guides</div><h1>Choose the right kind of help before the pattern chooses for you.</h1><p class="hero-copy">These pages are for the person searching at midnight: therapy, coaching, books, quizzes, courses, or something else. The goal is not to sell every reader coaching. The goal is to help you tell the truth about what kind of help fits the pattern you keep repeating.</p><div class="hero-actions"><a class="button primary" href="/free-guides/">Start with a free guide</a><a class="button secondary" href="/work-with-robert/">Work With Robert</a></div></section>
     <section class="section split"><div><p class="section-kicker">Decision hub</p><h2>Stop collecting advice. Pick the next honest step.</h2></div><div class="stack"><p>Some people need licensed therapy. Some need crisis support. Some need couples counseling. Some need a direct coaching process that maps the loop and practices a different response.</p><p>These guides help you separate those paths without pretending one answer fits every relationship.</p><p class="trust-note">{DISCLAIMER}</p></div></section>
     <section class="section card-grid">{''.join(f'<article class="offer-card"><h3>{title}</h3><p>{desc}</p><a class="button secondary" href="{url}">Read the guide</a></article>' for url,title,desc in hub_cards)}</section>
-    <section class="section dark-panel split"><div><p class="section-kicker">The conversion path</p><h2>If the guide names the problem, the Lab gives you reps.</h2></div><div class="stack"><p>Understanding the pattern is not the same as interrupting it while your body is activated. Pattern Interrupt Lab is the bridge between free insight and private coaching.</p><div class="pathway-actions"><a class="button primary" href="/pattern-interrupt-lab/">See the Lab</a><a class="button secondary" href="/work-with-robert/">Work With Robert</a></div></div></section>
+    <section class="section dark-panel split"><div><p class="section-kicker">The conversion path</p><h2>If the guide names the problem, coaching gives you a next step.</h2></div><div class="stack"><p>Understanding the pattern is not the same as interrupting it while your body is activated. If the guide names the problem clearly, the next step is to explore coaching or start with the right free guide.</p><div class="pathway-actions"><a class="button primary" href="/work-with-robert/">Work With Robert</a><a class="button secondary" href="/free-guides/">Start with a free guide</a></div></div></section>
 '''
 write_page('relationship-help', 'Relationship Help Guides | Robert Sawyer', 'Plain-English guides that help you choose between therapy, coaching, books, quizzes, and practical pattern work.', hub_body)
 
@@ -154,10 +154,11 @@ for slug, p in pages.items():
     <section class="hero page-hero"><div class="eyebrow">{p['kicker']}</div><h1>{p['h1']}</h1><p class="hero-copy">{p['copy']}</p><div class="hero-actions"><a class="button primary" href="#next-step">Start with the free guide</a><a class="button secondary" href="/relationship-help/">Relationship Help Guides</a></div></section>
     <section class="section split"><div><p class="section-kicker">My read</p><h2>Do not pick the help that protects the pattern.</h2></div><div class="stack"><p>The right resource should make the repeated loop clearer and your responsibility harder to dodge. The wrong resource gives you more language while the same behavior keeps running your relationship.</p><p class="trust-note">{DISCLAIMER}</p></div></section>
     <section class="section process-grid">{''.join(f'<article class="process-card"><strong>{html.escape(title)}</strong><p>{html.escape(copy)}</p></article>' for title, copy in p['sections'])}</section>
-    <section class="section dark-panel guide-offer-panel" id="next-step"><div class="lead-panel-grid"><div><p class="section-kicker">Next honest step</p><h2>{p['cta_title']}</h2><p class="lede">{p['cta_copy']}</p><p>If the guide names the pattern too clearly to ignore, the next step is Pattern Interrupt Lab or private coaching.</p><div class="pathway-actions"><a class="button secondary" href="/pattern-interrupt-lab/">See Pattern Interrupt Lab</a><a class="button secondary" href="/work-with-robert/">Work With Robert</a></div></div><aside class="kit-card"><p class="card-label">Free guide</p><h3>{'Why You Keep Having the Same Fight' if p['lead']=='couples' else 'Why You React That Way'}</h3><p>Enter your first name and email below.</p>{form}<p class="form-note">You will get the guide by email. No spam. Unsubscribe anytime.</p></aside></div></section>
+    <section class="section dark-panel guide-offer-panel" id="next-step"><div class="lead-panel-grid"><div><p class="section-kicker">Next honest step</p><h2>{p['cta_title']}</h2><p class="lede">{p['cta_copy']}</p><p>If the guide names the pattern too clearly to ignore, the next step is the right free guide or a coaching conversation.</p><div class="pathway-actions"><a class="button secondary" href="/free-guides/">Start with a free guide</a><a class="button secondary" href="/work-with-robert/">Work With Robert</a></div></div><aside class="kit-card"><p class="card-label">Free guide</p><h3>{'Why You Keep Having the Same Fight' if p['lead']=='couples' else 'Why You React That Way'}</h3><p>Enter your first name and email below.</p>{form}<p class="form-note">You will get the guide by email. No spam. Unsubscribe anytime.</p></aside></div></section>
 '''
     write_page(slug, p['title'], p['desc'], body, '<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>')
 
+# Mid-tier offer page is intentionally orphaned for now. Do not add it to nav/homepage until Rob revisits the offer/name.
 lab_body = f'''
     <section class="hero page-hero"><div class="eyebrow">Pattern Interrupt Lab</div><h1>Stop understanding the pattern and start interrupting it.</h1><p class="hero-copy">A 6-week practice group for people who react, shut down, defend, control, people-please, overexplain, or keep repeating the same relational loop.</p><div class="hero-actions"><a class="button primary" href="#waitlist">Join the waitlist</a><a class="button secondary" href="/relationship-help/">Read the guides</a></div></section>
     <section class="section split"><div><p class="section-kicker">Who this is for</p><h2>You know the pattern. You still lose the moment.</h2></div><div class="stack"><p>This is for the person who can explain the problem afterward but cannot access the better move when pressure hits.</p><ul class="symptom-list"><li>You defend before you understand.</li><li>You shut down and call it staying calm.</li><li>You control details because uncertainty feels unsafe.</li><li>You people-please, then punish with resentment.</li><li>You overexplain instead of telling the truth cleanly.</li><li>You repair late, then repeat the same move.</li></ul></div></section>
@@ -179,7 +180,7 @@ for path in ROOT.rglob('*.html'):
     original = text
     for old in old_navs:
         text = text.replace(old, NAV)
-    text = text.replace('<a class="nav-cta" href="/#find-your-pattern">Find Your Pattern</a>', '<a class="nav-cta" href="/pattern-interrupt-lab/">Join the Lab</a>')
+    text = text.replace('<a class="nav-cta" href="/#find-your-pattern">Find Your Pattern</a>', '<a class="nav-cta" href="/#find-your-pattern">Find Your Pattern</a>')
     text = text.replace('<div class="footer-links"><a href="/">Home</a><a href="/individual-coaching/">Individual Coaching</a><a href="/couples-coaching/">Couples Coaching</a><a href="/free-guides/">Free Guides</a><a href="/work-with-robert/">Work With Robert</a></div>', f'<div class="footer-links">{FOOTER_LINKS}</div>')
     text = text.replace('/assets/styles.css?v=20260706-humanized-pass', STYLE)
     if text != original:
@@ -192,7 +193,7 @@ text = index.read_text(encoding='utf-8')
 needle = '    <section class="section dark-panel">\n      <p class="section-kicker">How coaching works</p>'
 insert = '''    <section class="section split" id="relationship-help-guides">
       <div><p class="section-kicker">Relationship Help Guides</p><h2>Before you choose therapy, coaching, books, or another course, name what kind of help the pattern needs.</h2></div>
-      <div class="stack"><p>Search-intent pages now give cold Google traffic a plain-English path into the business: relationship coach vs therapist, marriage coaching vs counseling, couples therapy alternatives, couples therapy not working, books, and attachment quizzes.</p><div class="pathway-actions"><a class="button primary" href="/relationship-help/">Explore Relationship Help Guides</a><a class="button secondary" href="/pattern-interrupt-lab/">Join Pattern Interrupt Lab</a></div></div>
+      <div class="stack"><p>Search-intent pages now give cold Google traffic a plain-English path into the business: relationship coach vs therapist, marriage coaching vs counseling, couples therapy alternatives, couples therapy not working, books, and attachment quizzes.</p><div class="pathway-actions"><a class="button primary" href="/relationship-help/">Explore Relationship Help Guides</a><a class="button secondary" href="/#find-your-pattern">Find Your Pattern</a></div></div>
     </section>
 
 '''
