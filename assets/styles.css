@@ -223,7 +223,12 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 .compact-lead-form { margin: 0; padding: 18px; border: 1px solid var(--hairline-soft); background: var(--canvas); }
 .compact-lead-form h3 { color: var(--ink); margin-bottom: 0; }
 .lead-form label { color: var(--ink); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; }
-.lead-form input { width: 100%; min-height: 48px; border: 1px solid var(--hairline); border-radius: 0; background: var(--canvas); color: var(--ink); padding: 10px 16px; font: inherit; }
+.lead-form input, .lead-form textarea { width: 100%; min-height: 48px; border: 1px solid var(--hairline); border-radius: 0; background: var(--canvas); color: var(--ink); padding: 10px 16px; font: inherit; }
+.lead-form textarea { min-height: 140px; resize: vertical; }
+.path-choice { border: 1px solid var(--hairline-soft); padding: 16px; margin: 0; display: grid; gap: 10px; }
+.path-choice legend { color: var(--ink); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; padding: 0 6px; }
+.path-choice label { text-transform: none; letter-spacing: 0; font-size: 16px; display: flex; align-items: center; gap: 10px; }
+.path-choice input { width: auto; min-height: 0; }
 .kit-card .kit-live-form[data-uid] { display: grid; gap: 12px; width: 100%; max-width: none; border: 0; background: transparent; padding: 0; margin: 20px 0; overflow: visible; }
 .kit-card .kit-live-form[data-uid] .formkit-input { width: 100% !important; min-height: 48px !important; border: 1px solid var(--hairline) !important; border-radius: 0 !important; background: var(--canvas) !important; color: var(--ink) !important; padding: 10px 16px !important; font: inherit !important; line-height: 1.4 !important; }
 .kit-card .kit-live-form[data-uid] .formkit-submit { width: 100%; min-height: 48px; margin: 0; border-radius: 999px !important; background: var(--blue) !important; color: var(--canvas) !important; border: 1px solid var(--blue) !important; font: inherit !important; font-weight: 700 !important; }

@@ -128,6 +128,39 @@ const bindKitForm = (form) => {
 
 document.querySelectorAll('form.kit-live-form').forEach(bindKitForm);
 
+const bindInquiryForm = (form) => {
+  const status = ensureFormStatus(form);
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const path = String(data.get('path') || '').trim();
+    const timezone = String(data.get('timezone') || '').trim();
+    const goal = String(data.get('goal') || '').trim();
+    if (!name || !email || !isValidEmail(email) || !path || !goal) {
+      status.textContent = 'Please complete your name, a valid email, path, and brief goal.';
+      status.classList.add('is-visible');
+      return;
+    }
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Preferred path: ${path}`,
+      `Time zone: ${timezone || 'Not provided'}`,
+      '',
+      'What I would like to do differently:',
+      goal
+    ].join('\n');
+    trackEvent('coaching_inquiry_submit_attempt', { path });
+    window.location.href = `mailto:robertsawyerco@gmail.com?subject=${encodeURIComponent('RelationSync coaching inquiry')}&body=${encodeURIComponent(body)}`;
+    status.textContent = 'Your inquiry is ready to send.';
+    status.classList.add('is-visible');
+  });
+};
+
+document.querySelectorAll('form[data-inquiry-form]').forEach(bindInquiryForm);
+
 // Preview-safe lead forms.
 // These remain only for lead magnets whose production Kit HTML has not been provided yet.
 document.querySelectorAll('form[data-kit-placeholder]').forEach((form) => {

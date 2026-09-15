@@ -56,7 +56,16 @@ for route, price in [('/group-coaching/','$997'),('/individual-coaching/','$2,50
     page=BeautifulSoup((ROOT/route.strip('/')/'index.html').read_text(),'html.parser').get_text(' ',strip=True)
     assert price in page, route
 assert 'Community support' not in work
-report['static']={'html_parsed': parsed, 'reference_targets': len(refs), 'source_pairs': len(SOURCE_PAIRS), 'broken_links': broken, 'homepage_sections': sections, 'prices_removed_from_home_and_work_overview': True}
+apply_html = (ROOT/'apply/index.html').read_text()
+apply_text = apply_html.replace('\n', ' ')
+assert 'Ready to change the pattern?' in apply_text
+assert 'Tell Robert what you want to work on.' not in apply_text
+assert 'Email Robert to inquire' not in apply_text
+assert 'This link opens your email app' not in apply_text
+assert 'robertsawyerco@gmail.com</a>' not in apply_text
+assert 'Send inquiry' in apply_text and 'data-inquiry-form' in apply_html
+assert all(value in apply_html for value in ['Individual coaching', 'Couples coaching', 'Group coaching'])
+report['static']={'html_parsed': parsed, 'reference_targets': len(refs), 'source_pairs': len(SOURCE_PAIRS), 'broken_links': broken, 'homepage_sections': sections, 'prices_removed_from_home_and_work_overview': True, 'apply_basic_inquiry_form': True}
 
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
