@@ -310,11 +310,7 @@ h3 { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.05; font-weight: 800; l
 
 .journey-hero { padding-bottom: clamp(32px, 5vw, 64px); }
 .visual-band { background: #f8f5f0; width: 100%; max-width: none; padding-left: max(var(--gutter), calc((100% - var(--max)) / 2)); padding-right: max(var(--gutter), calc((100% - var(--max)) / 2)); }
-.visual-band-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr); gap: clamp(24px, 5vw, 72px); align-items: center; }
-.photo-proof-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; transform: rotate(-1deg); }
-.photo-proof-stack img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--ink); filter: grayscale(100%) contrast(1.06); border: 6px solid var(--canvas); box-shadow: 0 16px 40px rgba(17,17,17,.12); }
-.photo-proof-stack img:nth-child(2), .photo-proof-stack img:nth-child(3) { transform: translateY(18px); }
-@media (max-width: 820px) { .visual-band-grid { grid-template-columns: 1fr; } .photo-proof-stack { transform: none; } .photo-proof-stack img:nth-child(2), .photo-proof-stack img:nth-child(3) { transform: none; } }
+.visual-band h2, .visual-band .symptom-list { max-width: 1120px; }
 
 @media (max-width: 1100px) {
   .hero-grid, .lead-panel-grid, .decoder-hero-grid, .split { grid-template-columns: 1fr; }
