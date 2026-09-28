@@ -17,7 +17,9 @@ files = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BASE], c
 for path in files:
     previous = subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT)
     current = (ROOT/path).read_bytes()
-    if path.startswith('tests/'):
+    # check() above verifies the later approved guide-only release separately.
+    from check_guide_humanization import FILES as GUIDE_FILES
+    if path.startswith('tests/') or path in GUIDE_FILES:
         continue
     if path not in EDITABLE:
         assert current == previous, f'Unapproved change: {path}'

@@ -47,8 +47,11 @@ def check():
     assert current == expected, 'Changes outside the eight approved text nodes'
     assert [(x.name, x.attrs) for x in old.find_all(True)] == [(x.name, x.attrs) for x in new.find_all(True)]
     files = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', BASE], cwd=ROOT).decode().splitlines()
+    # Later approved guide copy has its own exact, production-baseline guard.
+    from check_guide_humanization import FILES as GUIDE_FILES, check as check_guides
+    check_guides()
     for path in files:
-        if path == 'index.html' or path.startswith('tests/'):
+        if path == 'index.html' or path.startswith('tests/') or path in GUIDE_FILES:
             continue
         assert (ROOT / path).read_bytes() == subprocess.check_output(['git', 'show', f'{BASE}:{path}'], cwd=ROOT), path
     production = [p for p in subprocess.check_output(['git', 'ls-files'], cwd=ROOT).decode().splitlines() if not p.startswith('tests/')]
