@@ -46,9 +46,9 @@ assert not broken, broken
 home=BeautifulSoup((ROOT/'index.html').read_text(),'html.parser')
 sections=[s.find(['h1','h2']).get_text(' ',strip=True) for s in home.select('main > section') if s.find(['h1','h2'])]
 text=home.get_text(' ',strip=True)
-assert sections[:4] == ['Hurting after a breakup? Unsure whether to stay?', 'What are you dealing with?', 'The fight is expensive even when it only lasts 20 minutes.', 'If you keep explaining it afterward, start here.'], sections[:4]
+assert sections[:4] == ['You don’t want to keep feeling like this.', 'What are you dealing with?', 'The fight is expensive even when it only lasts 20 minutes.', 'If you keep explaining it afterward, start here.'], sections[:4]
 assert 'If dating is where it shows up' not in text
-assert text.count('Individual path') == 1 and text.count('Couples path') == 1
+assert [x.get_text() for x in home.select('#find-your-pattern .choice-card > span')] == ['Individual', 'Couples']
 assert '$997' not in text and '$2,500' not in text and '$3,500' not in text
 work=BeautifulSoup((ROOT/'work-with-robert/index.html').read_text(),'html.parser').get_text(' ',strip=True)
 assert '$997 per person' not in work and '$2,500' not in work and '$3,500 per couple' not in work
