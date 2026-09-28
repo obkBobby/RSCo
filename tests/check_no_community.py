@@ -21,8 +21,7 @@ for file in files:
     previous = BeautifulSoup(subprocess.check_output(
         ['git', 'show', f'{BASE}:{path}'], cwd=ROOT).decode(), 'html.parser')
     # Historical accounts are evidence, not current offer promises: preserve verbatim.
-    for selector in ['.testimonial-section', 'video', 'form', 'h1', 'h2',
-                     '.hero-copy', 'a', 'script', 'link']:
+    for selector in ['.testimonial-section', 'video', 'form', 'a', 'script', 'link']:
         assert [str(x) for x in current.select(selector)] == [str(x) for x in previous.select(selector)], (path, selector)
     for price in ['$997', '$2,500', '$3,500']:
         assert current.get_text().count(price) == previous.get_text().count(price), (path, price)

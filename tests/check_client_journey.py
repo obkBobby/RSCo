@@ -8,7 +8,7 @@ import json
 import threading
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = Path('/Users/obk/rsco-client-journey-qa')
+OUT = ROOT / '.git' / 'buyer-copy-qa'
 OUT.mkdir(exist_ok=True)
 PAGES = ['/', '/free-guides/', '/why-you-react-that-way/', '/why-you-keep-having-the-same-fight/', '/work-with-robert/', '/individual-coaching/', '/couples-coaching/', '/group-coaching/', '/apply/']
 SOURCE_PAIRS = [
@@ -46,7 +46,7 @@ assert not broken, broken
 home=BeautifulSoup((ROOT/'index.html').read_text(),'html.parser')
 sections=[s.find(['h1','h2']).get_text(' ',strip=True) for s in home.select('main > section') if s.find(['h1','h2'])]
 text=home.get_text(' ',strip=True)
-assert sections[:4] == ['Start with the pattern.', 'Which pattern keeps repeating?', 'The fight is expensive even when it only lasts 20 minutes.', 'If you keep explaining it afterward, start here.'], sections[:4]
+assert sections[:4] == ['Hurting after a breakup? Unsure whether to stay?', 'What are you dealing with?', 'The fight is expensive even when it only lasts 20 minutes.', 'If you keep explaining it afterward, start here.'], sections[:4]
 assert 'If dating is where it shows up' not in text
 assert text.count('Individual path') == 1 and text.count('Couples path') == 1
 assert '$997' not in text and '$2,500' not in text and '$3,500' not in text
