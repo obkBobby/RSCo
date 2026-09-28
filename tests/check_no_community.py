@@ -3,6 +3,9 @@ from pathlib import Path
 import re
 import subprocess
 from bs4 import BeautifulSoup
+from check_homepage_humanization import check, normalize_approved_choice_text
+
+check()
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'a9bf37d'
@@ -20,6 +23,8 @@ for file in files:
     current = BeautifulSoup(file.read_text(), 'html.parser')
     previous = BeautifulSoup(subprocess.check_output(
         ['git', 'show', f'{BASE}:{path}'], cwd=ROOT).decode(), 'html.parser')
+    if path == 'index.html':
+        normalize_approved_choice_text(current)
     # Historical accounts are evidence, not current offer promises: preserve verbatim.
     for selector in ['.testimonial-section', 'video', 'form', 'a', 'script', 'link']:
         assert [str(x) for x in current.select(selector)] == [str(x) for x in previous.select(selector)], (path, selector)
